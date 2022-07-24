@@ -1,6 +1,7 @@
 import { useState } from "react"
 import "../App.css"
 import React from 'react';
+import Hamburger from './Hamburger.jsx'
 
 const Tabs = () => {
   
@@ -37,6 +38,7 @@ function renderData() {
 
   for (let i = 0; i < quotes.length; i++) {
     quoteTags += `<h3 class="slider-item">${quotes[i]}</h3>`
+    console.log(quotes)
   }
 
   slideDiv.insertAdjacentHTML('beforeend', quoteTags)
@@ -68,7 +70,7 @@ setInterval(changeQuotes, time)
         <button
           className={toggleState === 2 ? "tabs active-tabs" : "tabs"}
           onClick={() => toggleTab(2)} >
-          Second
+         Quotes
         </button>
         <button
           className={toggleState === 3 ? "tabs active-tabs" : "tabs"}
@@ -78,19 +80,20 @@ setInterval(changeQuotes, time)
       </div>
       <div className="content-tabs">
         <div className={toggleState === 1 ? "content active-content" : "content"}>
-          <h2>First Tab Info</h2>
+          <Hamburger />
+          <hr />
+          
+        </div>
+        <div
+          className={toggleState === 2 ? "content  active-content" : "content"}
+        >
+          <h2>Tronald Dump Quotes</h2>
           <hr />
           <div class="slider-container">
     <div class="slider">
      
     </div>
   </div>
-        </div>
-        <div
-          className={toggleState === 2 ? "content  active-content" : "content"}
-        >
-          <h2>Content 2</h2>
-          <hr />
           
         </div>
         <div
