@@ -1,7 +1,7 @@
 import { useState } from "react"
 import "../App.css"
 import React from 'react';
-import Hamburger from './Hamburger.jsx'
+
 
 const Tabs = () => {
   
@@ -80,7 +80,6 @@ setInterval(changeQuotes, time)
       </div>
       <div className="content-tabs">
         <div className={toggleState === 1 ? "content active-content" : "content"}>
-          <Hamburger />
           <hr />
           
         </div>
@@ -94,6 +93,7 @@ setInterval(changeQuotes, time)
      
     </div>
   </div>
+    
           
         </div>
         <div
